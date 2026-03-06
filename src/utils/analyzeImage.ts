@@ -5,6 +5,7 @@ import type { DitheringMode } from './imageProcessing';
  */
 export interface AnalysisResult {
     contrast: number;         // -100 to 100
+    brightness: number;       // -100 to 100
     gamma: number;            // 0.2 to 5.0
     edgeStrength: number;     // 0 to 100
     posterizeLevels: number;  // 2 to 16
@@ -308,6 +309,7 @@ export function analyzeImage(
 
     return {
         contrast,
+        brightness: 0,
         gamma,
         edgeStrength,
         posterizeLevels,

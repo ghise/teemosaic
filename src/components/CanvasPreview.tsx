@@ -17,6 +17,7 @@ export default function CanvasPreview() {
         originalImage,
         gridWidth,
         contrast,
+        brightness,
         gamma,
         edgeStrength,
         posterizeLevels,
@@ -180,6 +181,7 @@ export default function CanvasPreview() {
                         gridWidth,
                         gridHeight,
                         contrast,
+                        brightness,
                         gamma,
                         edgeStrength,
                         posterizeLevels,
@@ -240,7 +242,7 @@ export default function CanvasPreview() {
             isCancelled = true;
         };
 
-    }, [originalImage, gridWidth, contrast, gamma, edgeStrength, posterizeLevels, useKMeans, ditheringMode, hybridMode, bgThreshold, setBom, setMosaicData]);
+    }, [originalImage, gridWidth, contrast, brightness, gamma, edgeStrength, posterizeLevels, useKMeans, ditheringMode, hybridMode, bgThreshold, setBom, setMosaicData]);
 
     const zoomPercent = Math.round(zoom * 100);
 

@@ -86,11 +86,13 @@ function findClosestPaletteEntry(c: RGB): typeof PALETTE_ENTRIES[0] {
     return best;
 }
 
-// Apply Contrast & Gamma (brightness removed)
-function adjustPixel(pixel: number, contrastFactor: number, gammaInv: number): number {
+// Apply Brightness, Contrast & Gamma
+function adjustPixel(pixel: number, contrastFactor: number, brightness: number, gammaInv: number): number {
     let p = pixel;
     // Contrast
     p = contrastFactor * (p - 128) + 128;
+    // Brightness (simple additive offset)
+    p = p + brightness;
     // Gamma correction (applied on normalized 0-1 range)
     p = Math.max(0, Math.min(255, p));
     p = 255 * Math.pow(p / 255, gammaInv);
@@ -365,6 +367,7 @@ export function processImage(
     width: number,
     height: number,
     contrast: number,
+    brightness: number,
     gamma: number,
     edgeStrength: number,
     posterizeLevels: number,
@@ -378,11 +381,11 @@ export function processImage(
     const contrastFactor = (259 * (contrast + 255)) / (255 * (259 - contrast));
     const gammaInv = gamma > 0 ? 1 / gamma : 1;
 
-    // 1. Contrast + Gamma
+    // 1. Contrast + Brightness + Gamma
     for (let i = 0; i < data.length; i += 4) {
-        data[i] = adjustPixel(data[i], contrastFactor, gammaInv);
-        data[i + 1] = adjustPixel(data[i + 1], contrastFactor, gammaInv);
-        data[i + 2] = adjustPixel(data[i + 2], contrastFactor, gammaInv);
+        data[i] = adjustPixel(data[i], contrastFactor, brightness, gammaInv);
+        data[i + 1] = adjustPixel(data[i + 1], contrastFactor, brightness, gammaInv);
+        data[i + 2] = adjustPixel(data[i + 2], contrastFactor, brightness, gammaInv);
         data[i + 3] = 255;
     }
 

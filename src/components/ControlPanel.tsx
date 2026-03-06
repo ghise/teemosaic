@@ -176,6 +176,7 @@ export default function ControlPanel() {
         originalImage,
         gridWidth, setGridWidth,
         contrast, setContrast,
+        brightness, setBrightness,
         gamma, setGamma,
         edgeStrength, setEdgeStrength,
         posterizeLevels, setPosterizeLevels,
@@ -191,6 +192,7 @@ export default function ControlPanel() {
 
     const isDefault =
         contrast === 0 &&
+        brightness === 0 &&
         gamma === 1.0 &&
         edgeStrength === 0 &&
         posterizeLevels === 6 &&
@@ -201,6 +203,7 @@ export default function ControlPanel() {
 
     const handleReset = () => {
         setContrast(0);
+        setBrightness(0);
         setGamma(1.0);
         setEdgeStrength(0);
         setPosterizeLevels(6);
@@ -273,6 +276,15 @@ export default function ControlPanel() {
                 min={-100}
                 max={100}
                 onChange={setContrast}
+            />
+
+            <SliderRow
+                label="Brightness"
+                value={brightness}
+                min={-100}
+                max={100}
+                onChange={setBrightness}
+                hint="Shifts overall lightness up or down"
             />
 
             <SliderRow

@@ -12,6 +12,9 @@ interface MosaicState {
     contrast: number;
     setContrast: (contrast: number) => void;
 
+    brightness: number;
+    setBrightness: (brightness: number) => void;
+
     gamma: number;
     setGamma: (gamma: number) => void;
 
@@ -60,6 +63,9 @@ const useMosaicStore = create<MosaicState>((set, get) => ({
     contrast: 0,
     setContrast: (contrast) => set({ contrast }),
 
+    brightness: 0,
+    setBrightness: (brightness) => set({ brightness }),
+
     gamma: 1.0,
     setGamma: (gamma) => set({ gamma }),
 
@@ -102,6 +108,7 @@ const useMosaicStore = create<MosaicState>((set, get) => ({
 
         set({
             contrast: result.contrast,
+            brightness: result.brightness ?? 0,
             gamma: result.gamma,
             edgeStrength: result.edgeStrength,
             posterizeLevels: result.posterizeLevels,
