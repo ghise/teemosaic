@@ -6,6 +6,8 @@ TeeMosaic is a powerful client-side application designed to convert your favorit
 
 Whether you're an artist looking to plan a physical installation or just a hobbyist looking for a weekend craft project, TeeMosaic makes creating physical pixel art incredibly accessible.
 
+TRY IT HERE: https://teemosaic.netlify.app/
+
 ## 🌟 Key Features
 
 ### 🎨 Intelligent 6-Color Mapping
@@ -68,8 +70,6 @@ TeeMosaic isn't just a digital toy—it's a tool for architects of physical art.
 ### Running Locally
 
 **Web Version:**
-
-GO HERE: https://teemosaic.netlify.app/
 
 Start the standard development server:
 ```bash
