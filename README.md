@@ -8,16 +8,16 @@ Whether you're an artist looking to plan a physical installation or just a hobby
 
 ## 🌟 Key Features
 
-### 🎨 Intelligent 3-Color Mapping
-TeeMosaic maps your images to a specific palette designed for physical materials: **natural wood, white, and black golf tees**. The application automatically analyzes your photo and decides which tee color best represents each pixel to recreate the original image as faithfully as possible.
+### 🎨 Intelligent 6-Color Mapping
+TeeMosaic maps your images to a specific palette designed for physical materials: **white, black, red, green, blue, and yellow golf tees**. The application automatically analyzes your photo and decides which tee color best represents each pixel to recreate the original image as faithfully as possible.
 
 ### 🎛️ Image Processing & Tuning
-Every photo is different, and finding the perfect balance for a 3-color physical mosaic requires tuning. 
+Every photo is different, and finding the perfect balance for a 6-color physical mosaic requires tuning. 
 - **Contrast & Brightness**: Standard controls to make your subject pop.
 - **Midtones (Gamma)**: Advanced adjustment to bring out details in shadows or recover highlights without washing out your entire image.
 
 ### 🪄 Advanced Dithering Options
-Dithering is a technique used to create the illusion of color depth when you only have a few colors to work with. Think of it as mixing our 3 tee colors to create shading and details. TeeMosaic offers several algorithms, each providing a unique artistic style:
+Dithering is a technique used to create the illusion of color depth when you only have a few colors to work with. Think of it as mixing our 6 tee colors to create shading and details. TeeMosaic offers several algorithms, each providing a unique artistic style:
 - **Floyd-Steinberg Dithering**: The gold standard. It diffuses errors to neighboring pixels, creating smooth gradients and preserving fine details.
 - **Atkinson Dithering**: Popularized by early Apple Macintosh computers, this creates a higher contrast, slightly more "retro" look by leaving some areas completely flat.
 - **Ordered (Bayer Matrix) Dithering**: Creates a distinct, uniform cross-hatch or checkerboard pattern that gives a very intentional, stylized look.
