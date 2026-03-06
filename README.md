@@ -1,6 +1,6 @@
 # TeeMosaic
 
-![TeeMosaic User Interface](public/screenshot.png)
+![TeeMosaic User Interface](public/screenshot.jpg)
 
 TeeMosaic is a client-side application that converts user-uploaded photos into physical golf tee mosaic blueprints. Built with Next.js and Tauri, it provides a comprehensive suite of tools to tune, process, and generate detailed instructions for building real-world artwork out of golf tees.
 
