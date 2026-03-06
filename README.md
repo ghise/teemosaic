@@ -68,6 +68,9 @@ TeeMosaic isn't just a digital toy—it's a tool for architects of physical art.
 ### Running Locally
 
 **Web Version:**
+
+GO HERE: https://teemosaic.netlify.app/
+
 Start the standard development server:
 ```bash
 npm run dev
